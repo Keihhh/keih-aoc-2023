@@ -5,8 +5,9 @@ with open("day1\input.txt") as f:
 
 def calibration(data):
     
-    dataslist = data.split() #makes a list in which each data is a line
-    num = [re.findall('\d', lines) for lines in dataslist] #makes a list with lists of numbers in each line
+    datalist = data.split() #makes a list in which each data is a line
+    print(datalist)
+    num = [re.findall('\d', lines) for lines in datalist] #makes a list with lists of the numbers in each line
     linesum = (int(n[0] + n[-1]) for n in num) 
     result = sum(linesum)
     return result
