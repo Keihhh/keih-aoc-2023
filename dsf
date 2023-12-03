@@ -1,8 +1,0 @@
-        bluelist = list(filter(bluefilter.match, cubes))
-        bluelist = str(bluelist)
-        bluelist = bluelist.replace('[','').replace(']','').replace("'",'').replace(',','')
-        bluelist = bluelist.split()
-        bluelist = list(filter(numbersfilter.match, bluelist))
-        bluelist = [int(n) for n in bluelist]
-        print(bluelist)
-        print(max(bluelist))
